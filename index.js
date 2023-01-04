@@ -7,7 +7,6 @@ import "./connect.js"
 const router = express.Router();
 const app = express();
 app.set('port', process.env.PORT || 8000);
-
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
