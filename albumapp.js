@@ -6,7 +6,7 @@ const albumappSchema = new Schema(
     {
         cover: String,
         album: String,
-        artist: String,
+        artists: String,
         released: String,
        tracks: [String],
        about: String
