@@ -13,6 +13,12 @@ function details(req, res) {
         console.log(err)
         res.status(500).json(err)
     })}
+
+
+    function remove (req, res) {
+        Albumapp.findByIdAndRemove(req.params.id)
+        res.status(204).end()
+    }
     function add(req, res) {
         Albumapp.create(req.body)
       .then(album=> res.status(201).json({album}))
@@ -21,4 +27,4 @@ function details(req, res) {
             res.status(500).json(err)
             })}
 
-export{show, details, add}
+export{show, details, add, remove }
